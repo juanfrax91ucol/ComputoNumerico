@@ -5,14 +5,14 @@
 # heads
 # tails
 #Juan Francico Arreola Hernández.
-from random import choice
 import random
 
-def volados():
-    tiradas = [random.randint(1,2) for i in range(10000)]
-    aguila = tiradas.count(1)
-    sello = tiradas.count(2)
+resultados ={'sello': 0,'cara': 0}
 
-    print('Águila: ', aguiara, ' y Sello: ', sello)
+lados=list(resultados.keys())
 
-volados()
+for _ in range(10000):
+    resultados[random.choice(lados)] += 1
+print('En 10,000 Volados salieron: ')
+print('Sellos: ', resultados['sello'])
+print('Caras: ', resultados['cara'])
